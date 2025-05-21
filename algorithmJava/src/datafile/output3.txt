@@ -1,0 +1,37 @@
+package basic.io;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class FileReaderTest {
+	public static void main(String[] args) throws FileNotFoundException, IOException {
+		FileReader fi = new FileReader("src/datafile/test.txt");
+		while(true) {
+			int data = fi.read();
+			if(data==-1) {
+				break;
+			}
+			System.out.print((char)data);	
+		}
+		
+		
+//		try {
+//			FileReader fi = new FileReader("test.txt");
+//			while(true) {
+//				int data = fi.read();
+//				if(data==-1) {
+//					break;
+//				}
+//				System.out.print((char)data);	
+//			}
+//			
+//		} catch (FileNotFoundException e) {
+//			System.out.println("파일명이 틀렸습니다.");
+//		} catch (IOException e) {
+//			System.out.println("파일을 읽을 수 없습니다.");
+//		}
+	}
+
+}
+￿
